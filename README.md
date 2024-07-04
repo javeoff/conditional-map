@@ -14,6 +14,7 @@ npm install conditional-map
 import pMemoize from 'p-memoize';
 import ConditionalMap from 'conditional-map';
 
+let index = 0;
 const fixture = async () => index++;
 const condition = (value: number) => value % 2 !== 0;
 const memoized = pMemoize(fixture, {
